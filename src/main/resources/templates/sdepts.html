@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>List Depts</title>
+
+<link rel = "stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+
+</head>
+<body style = "background-color: #e6f7f6;">
+
+<div class="container text-center">
+
+		<div>
+			<h1> Dept List</h1>
+		
+			<div>
+				<table class="table table-bordered">
+						<thead class="thead-dark">
+						<tr>
+							<th> ID </th>
+							<th> Name </th>
+						</tr>
+						</thead>
+						<tbody>
+							<th:block th:each="sdept : ${listdepts}">
+								<tr> 
+									<td> [[${sdept.id}]]</td>
+									<td> [[${sdept.name}]]</td>
+								</tr>
+							</th:block>
+						
+						
+						</tbody>
+				
+				</table>
+			
+			</div>
+		
+			
+		</div>
+	</div>
+		<div class="text-center p-3">
+			<button type="button" class="btn btn-light">
+    		<a href="http://localhost:8080">Home</a>
+			</button>
+		</div>
+</body>
+</html>
